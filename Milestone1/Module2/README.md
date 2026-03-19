@@ -142,7 +142,7 @@ Example:
 
 ---
 
-## 🔄 Relation with Previous Module
+## Relation with Previous Module
 
 **Module 1**
 → Detects and visualizes defects using image subtraction.
