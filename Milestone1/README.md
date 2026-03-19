@@ -1,5 +1,5 @@
 
-# Milestone 1 — Dataset Preparation & Image Processing (Weeks 1–2)
+# Milestone 1 — Dataset Preparation & Image Processing 
 
 ---
 
