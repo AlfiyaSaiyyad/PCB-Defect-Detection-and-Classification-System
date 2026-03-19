@@ -3,15 +3,15 @@
 
 ---
 
-### 🎯 Objective
+### Objective
 The primary goal of this milestone is to convert raw PCB images into a structured dataset. We use **Classical Computer Vision** to detect defects via image subtraction and **XML Parsing** to extract precise Regions of Interest (ROIs) for future model training.
 
 ---
 
-### 🛠️ Module 1: Image Subtraction & Defect Masking
+### Module 1: Image Subtraction & Defect Masking
 In this module, we compare a "Template" (perfect PCB) with a "Test" (possibly defective PCB) to isolate differences.
 
-#### ✅ Key Tasks & Logic:
+#### Key Tasks & Logic:
 * **Image Alignment:** Resizing test images to match template dimensions for pixel-to-pixel comparison.
 * **CLAHE Enhancement:** Applied *Contrast Limited Adaptive Histogram Equalization* to improve visibility of fine traces.
 * **Gaussian Blurring:** Noise reduction using a `(3, 3)` kernel before subtraction.
@@ -20,16 +20,16 @@ In this module, we compare a "Template" (perfect PCB) with a "Test" (possibly de
 
 
 
-#### 📦 Deliverables:
-* `subtraction_logic.py`: Script for automated difference map generation.
+#### Deliverables:
+* `ImageS.py`: Script for automated difference map generation.
 * **Processed Outputs:** Defect-highlighted images categorized by type (Missing hole, Short, etc.).
 
 ---
 
-### 🔍 Module 2: XML-Driven ROI Extraction
+### Module 2: XML-Driven ROI Extraction
 Instead of manual cropping, we automate the generation of training samples using ground-truth annotations.
 
-#### ✅ Key Tasks & Logic:
+#### Key Tasks & Logic:
 * **XML Parsing:** Using `xml.etree.ElementTree` to read defect coordinates (`xmin`, `ymin`, `xmax`, `ymax`) and labels.
 * **Dynamic Cropping:** Extracting the exact bounding box from the high-resolution PCB images.
 * **Smart Padding:** Adding a **5-pixel buffer** around defects to ensure the model sees enough context for classification.
@@ -37,20 +37,20 @@ Instead of manual cropping, we automate the generation of training samples using
 
 
 
-#### 📦 Deliverables:
-* `roi_extractor.py`: Automated pipeline for generating thousands of training patches.
+#### Deliverables:
+* `ROI.py`: Automated pipeline for generating thousands of training patches.
 * **Dataset:** A clean `PCB_ROI` folder with labeled defect samples (128x128 approx).
 
 ---
 
-### 📊 Evaluation & Results
+### Evaluation & Results
 * **Defect Grading:** Defects are automatically categorized as **"Major"** (Area > 400px) or **"Minor"** (Area > 25px) based on contour analysis.
 * **Accuracy:** High correlation between XML ground truth and extracted image patches.
 * **Repeatability:** The script handles both `.jpg` and `.png` formats and safely skips missing files.
 
 ---
 
-### 💻 Tech Stack
+### Tech Stack
 * **Language:** Python 3.x
 * **Libraries:** OpenCV (Image Processing), NumPy (Array Math), XML.etree (Data Parsing)
 
