@@ -1,5 +1,7 @@
 
-Module 3: Model Training with EfficientNet
+
+# Module 3: Model Training with EfficientNet
+---
 
 Tasks Performed:
 Neural Network Implementation: Built a classification model using PyTorch/Torchvision with an EfficientNet-B0 backbone.
@@ -10,43 +12,39 @@ Data Augmentation: Applied techniques like Random Flips, Rotations, and Color Ji
 
 Optimization Strategy: Trained the model using the Adam Optimizer and Cross-Entropy Loss for 15+ epochs.
 
-Deliverables:
+---
+
+# Deliverables:
 ✔️ Trained Model: Saved as pcb_final.pth.
 
 ✔️ Metrics: Training/Validation Accuracy and Loss logs.
 
 ✔️ Visualizations: Detailed accuracy plots and a comprehensive Confusion Matrix.
 
-📊 Evaluation Benchmarks (Results)
+---
+
+# Evaluation Benchmarks (Results)
 Classification Accuracy: Achieved ≥ 95% accuracy on the test set.
 
 Performance: Stable and repeatable training curves indicating a well-generalized model.
 
-Visual Evidence:
-(Images are scaled for better visibility and "breathing space")
-
+---
+Visual Evidence (Direct View):
 <div align="center">
-<p><b>Training Accuracy & Loss Graph</b></p>
-<img src="Milestone_2/AccuracyGraph.png" width="600" alt="Accuracy Graph">
+<p align="left"><b>1. Training Accuracy & Loss Graph</b></p>
+<img src="Milestone_2/AccuracyGraph.png" width="750" alt="Accuracy Graph">
 
 
 
-<p><b>Confusion Matrix</b></p>
-<img src="Milestone_2/ConfusionMatrix.png" width="600" alt="Confusion Matrix">
+<p align="left"><b>2. Confusion Matrix (7-Class Performance)</b></p>
+<img src="Milestone_2/ConfusionMatrix.png" width="750" alt="Confusion Matrix">
 </div>
 
-🛠️ Tech Stack
+# Tech Stack
 Framework: PyTorch (Deep Learning)
 
 Vision: OpenCV (Preprocessing)
 
 Analysis: Scikit-learn (Confusion Matrix & Reports)
 
-Bhai, ye 2 cheezein check kar lena:
-File Names: Maine exactly wahi naam likhe hain jo aapne diye: accuracy graph.png aur confusion mtraix.png. Agar file name mein spelling mistake hai (jaise mtraix), toh GitHub par bhi wahi hona chahiye tabhi image dikhegi.
-
-Folder: Maine path Milestone_2/ rakha hai. Agar aapki images is folder ke andar hain, toh ye 100% kaam karega.
-
-Commands to push:
-
-Bash
+---
