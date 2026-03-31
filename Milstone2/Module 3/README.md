@@ -1,9 +1,10 @@
 
 
 # Module 3: Model Training with EfficientNet
----
 
-Tasks Performed:
+
+# Tasks Performed:
+
 Neural Network Implementation: Built a classification model using PyTorch/Torchvision with an EfficientNet-B0 backbone.
 
 Image Preprocessing: All defect images were resized to 128x128 pixels to maintain consistency and optimize training.
@@ -32,12 +33,12 @@ Performance: Stable and repeatable training curves indicating a well-generalized
 Visual Evidence (Direct View):
 <div align="center">
 <p align="left"><b>1. Training Accuracy & Loss Graph</b></p>
-<img src="Milestone_2/AccuracyGraph.png" width="750" alt="Accuracy Graph">
+<img src="Milestone_2/Module 3/AccuracyGraph.png" width="750" alt="Accuracy Graph">
 
 
 
 <p align="left"><b>2. Confusion Matrix (7-Class Performance)</b></p>
-<img src="Milestone_2/ConfusionMatrix.png" width="750" alt="Confusion Matrix">
+<img src="Milestone_2/Module 3/ConfusionMatrix.png" width="750" alt="Confusion Matrix">
 </div>
 
 # Tech Stack
