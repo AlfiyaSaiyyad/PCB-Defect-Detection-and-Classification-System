@@ -26,7 +26,7 @@ Deep Learning: PyTorch, Torchvision (EfficientNet-B0)
 
 Backend: Python, Flask, SQLAlchemy (PostgreSQL)
 
-Frontend: HTML5, CSS3 (Responsive Design), JavaScript
+Frontend: HTML5, CSS3 (Responsive Design)
 
 Dataset: DeepPCB
 
@@ -40,7 +40,7 @@ Noise Reduction: Gaussian Blur and Morphological operations to clean the mask.
 
 Contour Detection: Extracts bounding boxes for every detected anomaly.
 
---
+---
 🔹 Milestone 2: AI Model
 Model: EfficientNet-B0 (Transfer Learning).
 
@@ -48,7 +48,7 @@ Performance: High accuracy on validation set with a clear Confusion Matrix.
 
 Input Size: 128x128 pixels.
 
---
+---
 🔹 Milestone 3: Web Integration
 Dashboard: Shows real-time analysis results.
 
