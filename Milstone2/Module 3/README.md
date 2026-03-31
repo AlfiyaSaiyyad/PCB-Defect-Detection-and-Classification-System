@@ -30,7 +30,7 @@ Classification Accuracy: Achieved ≥ 95% accuracy on the test set.
 Performance: Stable and repeatable training curves indicating a well-generalized model.
 
 ---
-Visual Evidence (Direct View):
+Visual Evidence:
 
 
 <div align="center">
@@ -42,7 +42,7 @@ Visual Evidence (Direct View):
   <br><br>
 
   <p><b>Model Accuracy Graph</b></p>
-  <img src="AccuracyGraph.png" width="500" alt="Accuracy Graph">
+  <img src="AccuracyGraph.png" width="700" alt="Accuracy Graph">
   
   <p><i>Note: The model achieved high accuracy on PCB defect detection using EfficientNet-B0.</i></p>
 </div>
