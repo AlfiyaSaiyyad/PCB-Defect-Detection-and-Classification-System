@@ -31,16 +31,20 @@ Performance: Stable and repeatable training curves indicating a well-generalized
 
 ---
 Visual Evidence (Direct View):
+
+
 <div align="center">
-<p align="left"><b>1. Training Accuracy & Loss Graph</b></p>
-<img src="Milestone_2/Module 3/AccuracyGraph.png" width="750" alt="Accuracy Graph">
+  <h3>Module 3: Model Evaluation</h3>
+  
+  <p><b>Confusion Matrix</b></p>
+  <img src="ConfusionMatrix.png" width="500" alt="Confusion Matrix">
+  
+  <br><br>
 
-<img width="600" alt="Accuracy Graph" src="Milestone_2/Accuracy%20Graph.png" />
-
-<img width="600" alt="Confusion Matrix" src="Milestone_2/confusion%20Matrix.png" />
-
-<p align="left"><b>2. Confusion Matrix (7-Class Performance)</b></p>
-<img src="Milestone_2/Module 3/ConfusionMatrix.png" width="750" alt="Confusion Matrix">
+  <p><b>Model Accuracy Graph</b></p>
+  <img src="AccuracyGraph.png" width="500" alt="Accuracy Graph">
+  
+  <p><i>Note: The model achieved high accuracy on PCB defect detection using EfficientNet-B0.</i></p>
 </div>
 
 # Tech Stack
