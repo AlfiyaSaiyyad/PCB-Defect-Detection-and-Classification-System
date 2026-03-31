@@ -35,7 +35,9 @@ Visual Evidence (Direct View):
 <p align="left"><b>1. Training Accuracy & Loss Graph</b></p>
 <img src="Milestone_2/Module 3/AccuracyGraph.png" width="750" alt="Accuracy Graph">
 
+<img width="600" alt="Accuracy Graph" src="Milestone_2/Accuracy%20Graph.png" />
 
+<img width="600" alt="Confusion Matrix" src="Milestone_2/confusion%20Matrix.png" />
 
 <p align="left"><b>2. Confusion Matrix (7-Class Performance)</b></p>
 <img src="Milestone_2/Module 3/ConfusionMatrix.png" width="750" alt="Confusion Matrix">
