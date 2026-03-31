@@ -40,6 +40,7 @@ Noise Reduction: Gaussian Blur and Morphological operations to clean the mask.
 
 Contour Detection: Extracts bounding boxes for every detected anomaly.
 
+--
 🔹 Milestone 2: AI Model
 Model: EfficientNet-B0 (Transfer Learning).
 
@@ -47,6 +48,7 @@ Performance: High accuracy on validation set with a clear Confusion Matrix.
 
 Input Size: 128x128 pixels.
 
+--
 🔹 Milestone 3: Web Integration
 Dashboard: Shows real-time analysis results.
 
@@ -57,17 +59,20 @@ Authentication: Secure Login and Signup system.
 ---
 # User Guide (How to Use)
 Backend Setup
+
 Clone the Repo:
 
 Bash
-git clone https://github.com/yourusername/pcb-defect-system.git
-cd pcb-defect-system
+git clone https://github.com/AlfiyaSaiyyad/PCB-Defect-Detection-and-Classification-System.git
+
+cd PCB-Defect-Detection-and-Classification-System
 Install Dependencies:
 
 Bash
 pip install -r requirements.txt
 Database Configuration:
 Update the SQLALCHEMY_DATABASE_URI in app.py with your PostgreSQL credentials.
+
 
 Run Application:
 
@@ -77,6 +82,7 @@ python app.py
 ---
 
 Frontend Usage
+
 Login: Create an account and log in to the dashboard.
 
 Upload: Go to the "Scan" page. Upload a PCB image.
