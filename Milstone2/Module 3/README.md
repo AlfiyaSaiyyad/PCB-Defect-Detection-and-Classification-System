@@ -1,56 +1,52 @@
-Module 3: Model Training & Evaluation (PCB Defect Classification)
-This module covers the implementation, training, and evaluation of the Deep Learning architecture used to classify PCB defects. The model is designed to work as the "Brain" of the hybrid inspection system, categorizing localized patches into specific defect types.
 
-Technical Implementation
-The model was built using PyTorch and follows the specifications below:
+Module 3: Model Training with EfficientNet
 
-Core Architecture: EfficientNet-B0
+Tasks Performed:
+Neural Network Implementation: Built a classification model using PyTorch/Torchvision with an EfficientNet-B0 backbone.
 
-Input Dimensions: 128x128 pixels (RGB).
+Image Preprocessing: All defect images were resized to 128x128 pixels to maintain consistency and optimize training.
 
-Classification Head: Custom Linear layer with 7 Output Nodes (6 Defect Categories + 1 Normal class).
+Data Augmentation: Applied techniques like Random Flips, Rotations, and Color Jittering to enhance model robustness and prevent overfitting.
 
-Optimization Strategy:
+Optimization Strategy: Trained the model using the Adam Optimizer and Cross-Entropy Loss for 15+ epochs.
 
-Optimizer: Adam (Learning Rate: 0.001) for stable weight updates.
+Deliverables:
+✔️ Trained Model: Saved as pcb_final.pth.
 
-Loss Function: CrossEntropyLoss for multi-class classification.
+✔️ Metrics: Training/Validation Accuracy and Loss logs.
 
-Training Regime: 15 Epochs with real-time validation tracking.
+✔️ Visualizations: Detailed accuracy plots and a comprehensive Confusion Matrix.
 
-Training Process & Metrics
-The training was conducted with a clear split between training and validation sets to ensure the model generalizes well to unseen PCB scans.
+📊 Evaluation Benchmarks (Results)
+Classification Accuracy: Achieved ≥ 95% accuracy on the test set.
 
-Target Accuracy: ≥ 95% classification accuracy on the test/validation set.
+Performance: Stable and repeatable training curves indicating a well-generalized model.
 
-Data Handling: Implemented automated label collection in the final epoch to generate a high-precision Confusion Matrix.
+Visual Evidence:
+(Images are scaled for better visibility and "breathing space")
 
-Evaluation Deliverables:
-1. Accuracy & Loss Trends
-The following plot illustrates the convergence of the model, showing a consistent decrease in loss and an increase in accuracy over 15 epochs.
+<div align="center">
+<p><b>Training Accuracy & Loss Graph</b></p>
+<img src="Milestone_2/AccuracyGraph.png" width="600" alt="Accuracy Graph">
 
-2. Confusion Matrix
-This matrix provides a detailed breakdown of the model's performance, confirming its ability to distinguish between similar defect classes like Spur and Short.
 
-Dataset Categories
-The model is trained to identify the following 7 classes:
 
-Missing_hole
+<p><b>Confusion Matrix</b></p>
+<img src="Milestone_2/ConfusionMatrix.png" width="600" alt="Confusion Matrix">
+</div>
 
-Mouse_bite
+🛠️ Tech Stack
+Framework: PyTorch (Deep Learning)
 
-Normal
+Vision: OpenCV (Preprocessing)
 
-Open_circuit
+Analysis: Scikit-learn (Confusion Matrix & Reports)
 
-Short
+Bhai, ye 2 cheezein check kar lena:
+File Names: Maine exactly wahi naam likhe hain jo aapne diye: accuracy graph.png aur confusion mtraix.png. Agar file name mein spelling mistake hai (jaise mtraix), toh GitHub par bhi wahi hona chahiye tabhi image dikhegi.
 
-Spur
+Folder: Maine path Milestone_2/ rakha hai. Agar aapki images is folder ke andar hain, toh ye 100% kaam karega.
 
-Spurious_copper
+Commands to push:
 
-#### **1. Accuracy and Loss Curves**
-![Accuracy Plot](Milestone_3/accuracy_plot.png) 
-
-#### **2. Confusion Matrix**
-![Confusion Matrix](Milestone_3/confusion_matrix.png)
+Bash
