@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCB AI - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">PCB AI Vision</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            
+        </ul>
+    </nav>
+
+    <div class="main-wrapper">
+        
+        <div class="slider-section">
+            <div class="slides">
+                <img src="/static/bg_pcb.jpg" alt="PCB AI Analysis">
+            </div>
+            <div class="overlay-text">
+                <h2>Precision in Production</h2>
+                <p>AI-Powered Defect Classification for Next-Gen Electronics.</p>
+            </div>
+        </div>
+
+        <div class="auth-section">
+            <div class="glass-card">
+                {% if signup_mode %}
+                    <h2>Create Account</h2>
+                    <form action="/signup" method="POST">
+                        <div class="input-group">
+                            <label>Username</label>
+                            <input type="text" name="username" required placeholder="Enter username">
+                        </div>
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" name="password" required placeholder="••••••••">
+                        </div>
+                        <button type="submit" class="btn">Register</button>
+                        <p>Already a member? <a href="/">Login</a></p>
+                    </form>
+                {% else %}
+                    <h2>User Login</h2>
+                    <form action="/login" method="POST">
+                        <div class="input-group">
+                            <label>Username</label>
+                            <input type="text" name="username" required placeholder="Enter username">
+                        </div>
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" name="password" required placeholder="••••••••">
+                        </div>
+                        <button type="submit" class="btn">Sign In</button>
+                        <p>New User? <a href="/signup">Create Account</a></p>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<div id="about" class="about-section">
+    <div class="container">
+        <h2 class="section-title">About Our PCB Defect Detection System</h2>
+        <p class="intro-text">
+            Our system leverages state-of-the-art <strong>EfficientNet-B0</strong> Deep Learning architecture to provide 
+            automated visual inspection of Printed Circuit Boards with up to <strong>99% accuracy</strong>.
+        </p>
+
+        <hr class="separator">
+
+        <div class="about-grid">
+            <div class="about-card">
+                <i class="fas fa-microchip"></i>
+                <h3>How It Works</h3>
+                <p>The AI analyzes pixel-level patterns in the PCB image, comparing them against thousands of trained samples to identify structural irregularities.</p>
+            </div>
+
+            <div class="about-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>6 Class Detection:</strong> Short, Missing Hole, etc.</li>
+                    <li><strong>Real-time Speed:</strong> Results in < 1 second.</li>
+                    <li><strong>High Precision:</strong> Minimizes human error.</li>
+                </ul>
+            </div>
+
+            <div class="about-card">
+                <i class="fas fa-list-ol"></i>
+                <h3>Steps to Scan</h3>
+                <ol>
+                    <li>Upload a clear top-down PCB image.</li>
+                    <li>Click <strong>"Start AI Inspection"</strong> to start AI analysis.</li>
+                    <li>Review the defect label and confidence score.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .about-section {
+        padding: 50px 20px;
+        background-color: #f8f9fa;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .section-title { color: #2c3e50; margin-bottom: 20px; font-size: 2.5rem; }
+    .intro-text { max-width: 800px; margin: 0 auto 40px; color: #555; line-height: 1.6; }
+    .about-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .about-card {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    .about-card:hover { transform: translateY(-10px); }
+    .about-card i { font-size: 2.5rem; color: #00ce7c ; margin-bottom: 15px; display: block; }
+    .about-card h3 { color: #333; margin-bottom: 15px; }
+    .about-card p, .about-card li { color: #666; font-size: 0.95rem; text-align: left; }
+    .separator { width: 50px; border: 2px solid #049e26; margin-bottom: 40px; margin-left: auto; margin-right: auto; }
+    ul, ol { padding-left: 20px; }
+
+    
+</style>
+</body>

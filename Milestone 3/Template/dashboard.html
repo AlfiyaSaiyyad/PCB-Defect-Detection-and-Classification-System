@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCB AI - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+    <nav class="dash-nav">
+        <div class="logo">PCB VISION <span>AI</span></div>
+        <div class="user-profile">
+            <div class="profile-info">
+                <span class="u-name">{{ current_user.username }}</span>
+                <span class="u-email">{{ current_user.username }}@pcbai.com</span>
+            </div>
+            <i class="fas fa-user-circle profile-icon" ></i>
+            <div class="profile-dropdown">
+                <li>
+    <a href="/logout" style="background: #f3f6f6 !important; color: rgb(7, 83, 6) !important; padding: 10px 20px !important; border-radius: 12px !important; text-decoration: none !important; font-weight: 600 !important; border: 1.5px solid rgba(255,255,255,0.3) !important; box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4) !important; display: inline-block !important;">
+        Logout
+    </a>
+</li>
+                
+            </div>
+        </div>
+    </nav>
+
+    <div class="dash-container">
+        <div class="main-card">
+            <h2 class="hero-text">Want to find defects in your PCB?</h2>
+            <p class="sub-text">Click the button below to start the high-precision AI scanning.</p>
+            
+            <div class="action-buttons">
+                <a href="/scan" class="btn-main upload-btn">
+                    <i class="fas fa-cloud-upload-alt"></i> Upload PCB Image Here
+                </a>
+
+                <a href="/history" class="btn-main history-btn">
+                    <i class="fas fa-history"></i> View Past Uploads
+                </a>
+            </div>
+        </div>
+
+        <div class="stats-row">
+            <div class="stat-box">
+                <i class="fas fa-microchip"></i>
+                <span>Model: EfficientNet-B0</span>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-check-circle"></i>
+                <span>Status: System Ready</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

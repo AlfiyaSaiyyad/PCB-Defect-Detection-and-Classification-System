@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PCB AI - History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+    /* Table Styling */
+    .history-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 10px; 
+        margin-top: 20px;
+    }
+
+    .history-table thead th {
+        background-color: transparent;
+        color: #888;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        padding: 15px;
+        text-align: left;
+        border-bottom: 2px solid #333;
+    }
+
+    .history-table tbody tr {
+        background-color: #1a1f2b; 
+        transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .history-table tbody tr:hover {
+        background-color: #242b3d;
+        transform: scale(1.01); 
+    }
+
+    .history-table td {
+        padding: 20px 15px;
+        color: #e0e0e0;
+        vertical-align: middle;
+        border: none;
+    }
+
+    
+    .history-table tbody tr td:first-child {
+        border-radius: 10px 0 0 10px;
+    }
+    .history-table tbody tr td:last-child {
+        border-radius: 0 10px 10px 0;
+    }
+
+    /* Result Badge Styling */
+    .result-badge {
+        background-color: #00ce7c;
+        color: #000;
+        font-weight: bold;
+        border-radius: 20px;
+        display: inline-block;
+        text-align: center;
+        min-width: 120px;
+    }
+
+    /* View link hover effect */
+    .history-table a:hover {
+        text-decoration: underline !important;
+        opacity: 0.8;
+    }
+</style>
+</head>
+<body class="dashboard-body">
+    <nav class="dash-nav">
+        <a href="/dashboard" style="color: white; text-decoration: none;"><i class="fas fa-arrow-left"></i> Back</a>
+        <h2 style="margin:0; color: #00ce7c;">Past Inspection Records</h2>
+    </nav>
+
+    <div class="dash-container">
+        {% if scans %}
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>Inspection Date</th>
+                        <th>Defect Type</th>
+                        <th>Annotated Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for scan in scans %}
+                    <tr>
+                        <td>{{ scan.date_posted.strftime('%d %b %Y | %H:%M') }}</td>
+                        <td><span class="result-badge" style="padding: 5px 15px; font-size: 0.8rem;">{{ scan.result_label }}</span></td>
+                        <td><a href="{{ url_for('static', filename='results/' + scan.filename) }}" target="_blank" style="color: #00ce7c; text-decoration: none;"><i class="fas fa-external-link-alt"></i> View Result</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <div class="main-card">
+                <h3>No records found. Start your first scan!</h3>
+                <a href="/scan" class="btn-main upload-btn" style="display:inline-block; margin-top:20px;">Go to Scan</a>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
