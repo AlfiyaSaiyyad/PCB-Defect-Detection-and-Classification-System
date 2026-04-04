@@ -96,7 +96,9 @@ Download: Use the "Download Full Report" button to save the result as a PDF (via
 ---
 
 # Evaluation Metrics
-Metric	                    Target	Result
-Classification Accuracy	    ≥ 95%	Achieved
-Inference Time	            ≤ 3 sec	Achieved
-Export Feature Working	    PDF/Image Export
+
+| Metric | Target Result |
+| :--- | :--- |
+| **Classification Accuracy** | ≥ 95%  Achieved |
+| **Inference Time** | ≤ 3 sec Achieved |
+| **Export Feature Working** | PDF/Image Export Fully Functional |
